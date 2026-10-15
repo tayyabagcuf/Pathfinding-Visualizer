@@ -1,0 +1,119 @@
+.node {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(175, 216, 248);
+  background-color: #262730;
+}
+
+.node-finish {
+  background-color: rgb(236, 67, 194);
+  background-position: center;
+  background-size: cover;
+}
+
+.node-finish-visited {
+  animation-name: visitednode;
+  animation-duration: 1.5s;
+  background-color: rgb(23, 123, 200);
+  background-position: center;
+  background-size: cover;
+}
+
+.node-start {
+  background-color: rgb(113, 255, 132);
+  background-position: center;
+  background-size: cover;
+}
+
+.node-start-visited {
+  animation-name: visitednode;
+  animation-duration: 1.5s;
+  background-color: rgb(174, 255, 136);
+  background-position: center;
+  background-size: cover;
+}
+
+.node-wall {
+  animation-name: nodewall;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+  background-color: #030a16;
+  border: 0px;
+}
+
+@keyframes nodewall {
+  0% {
+    transform: scale(1.5);
+    background-color: rgb(179, 179, 179);
+  }
+  50% {
+    transform: scale(1);
+    background-color: rgb(133, 133, 133);
+  }
+  100% {
+    background-color: rgb(52, 52, 52);
+  }
+}
+
+.node-visited {
+  animation-name: visitednode;
+  animation-duration: 1.5s;
+  background-color: rgb(37, 149, 235);
+}
+
+@keyframes visitednode {
+  0% {
+    transform: scale(0.2);
+    background-color: rgb(65, 20, 47);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: rgb(255, 78, 184);
+    border-radius: 50%;
+  }
+  75% {
+    transform: scale(1.2);
+    background-color: rgb(255, 238, 48);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(35, 136, 214);
+  }
+}
+
+.node-finish-shortestpath {
+  animation-name: shortestpath;
+  animation-duration: 1.5s;
+  background-color: rgb(235, 37, 178);
+  background-position: center;
+  background-size: cover;
+}
+
+.node-shortestpath {
+  animation-name: shortestpath;
+  animation-duration: 1.5s;
+  background-color: #fdcf16;
+}
+
+@keyframes shortestpath {
+  0% {
+    transform: scale(0.4);
+    background-color: rgb(41, 228, 169);
+    border-radius: 60%;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: rgba(39, 255, 50, 0.853);
+  }
+  100% {
+    transform: scale(1);
+    background-color: #fddf66;
+  }
+}
+
+@media (max-width: 768px) {
+  .node {
+    width: 20px;
+    height: 20px;
+  }
+}
